@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload RDF file{% endblock %}
+
+{% block html_body %}
+
+<h1>Upload RDF File</h1>
+<form action="/rdf/upload" method = "POST" enctype="multipart/form-data">
+        <input type="file" id="rdf_file" name="rdf_file" />
+		<input type="submit" value="Submit">
+</form>
+
+{% endblock %}

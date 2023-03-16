@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#"
+     xml:base="https://mis.cs.univie.ac.at/ontologies/2021SS/mst"
+     xmlns:mst="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#developed_by -->
+
+    <owl:ObjectProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#developed_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#develops"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game"/>
+        <rdfs:range rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Developer"/>
+        <rdfs:comment xml:lang="en">Which company a video game was developed by.</rdfs:comment>
+        <rdfs:label xml:lang="en">developed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#develops -->
+
+    <owl:ObjectProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#develops">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Developer"/>
+        <rdfs:range rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game"/>
+        <rdfs:comment xml:lang="en">Which video game(s) a company has developed.</rdfs:comment>
+        <rdfs:label xml:lang="en">develops</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#published_by -->
+
+    <owl:ObjectProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#published_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#publishes"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game"/>
+        <rdfs:range rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Publisher"/>
+        <rdfs:comment xml:lang="en">Which company the video game was published by.</rdfs:comment>
+        <rdfs:label xml:lang="en">published by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#publishes -->
+
+    <owl:ObjectProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#publishes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Publisher"/>
+        <rdfs:range rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game"/>
+        <rdfs:comment xml:lang="en">Which video game(s) a company has published.</rdfs:comment>
+        <rdfs:label xml:lang="en">publishes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#supports_platform -->
+
+    <owl:ObjectProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#supports_platform">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#supports_software"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Software"/>
+        <rdfs:range rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Computing_Platform"/>
+        <rdfs:comment xml:lang="en">Which kind(s) of platfor(s) a software can run on.</rdfs:comment>
+        <rdfs:label xml:lang="en">supports platform</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#supports_software -->
+
+    <owl:ObjectProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#supports_software">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Computing_Platform"/>
+        <rdfs:range rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Software"/>
+        <rdfs:comment xml:lang="en">Which software can run on this computing platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">supports software</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#alias -->
+
+    <owl:DatatypeProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#alias">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">What other name(s) a thing is known under.</rdfs:comment>
+        <rdfs:label xml:lang="en">alias</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#no_employees -->
+
+    <owl:DatatypeProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#no_employees">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">How many employees a company has.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of employees</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#release_date -->
+
+    <owl:DatatypeProperty rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#release_date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date at which the video game was first released.</rdfs:comment>
+        <rdfs:label xml:lang="en">release date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Company -->
+
+    <owl:Class rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Company">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Computing_Platform -->
+
+    <owl:Class rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Computing_Platform">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A type of hardware or software framework that allows software to run.</rdfs:comment>
+        <rdfs:label xml:lang="en">Computing Platform</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/resource/computingPlatform</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Developer -->
+
+    <owl:Class rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Developer">
+        <rdfs:subClassOf rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Company"/>
+        <rdfs:comment xml:lang="en">A company that develops (and sometimes also publishes) video games.</rdfs:comment>
+        <rdfs:label xml:lang="en">Developer</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/resource/developer</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Publisher -->
+
+    <owl:Class rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Publisher">
+        <rdfs:subClassOf rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Company"/>
+        <rdfs:comment xml:lang="en">A company that publishes (and sometimes also develops) video games.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/resource/publisher</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Software -->
+
+    <owl:Class rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Software">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game -->
+
+    <owl:Class rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game">
+        <rdfs:subClassOf rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Software"/>
+        <rdfs:comment xml:lang="en">A piece of software primarly aimed towards entertainment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Video Game</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://dbpedia.org/resource/Video_game</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Bandai_Namco -->
+
+    <owl:NamedIndividual rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Bandai_Namco">
+        <rdf:type rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Developer"/>
+        <rdf:type rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Publisher"/>
+        <develops rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia"/>
+        <publishes rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia"/>
+        <alias xml:lang="en">Bandai Namco Holdings</alias>
+        <no_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1047</no_employees>
+        <rdfs:label>Bandai Namco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Microsoft_Windows -->
+
+    <owl:NamedIndividual rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Microsoft_Windows">
+        <rdf:type rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Computing_Platform"/>
+        <supports_software rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia"/>
+        <alias>MS Windows</alias>
+        <rdfs:label>Microsoft Windows</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia -->
+
+    <owl:NamedIndividual rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia">
+        <rdf:type rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Video_Game"/>
+        <developed_by rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Bandai_Namco"/>
+        <published_by rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Bandai_Namco"/>
+        <supports_platform rdf:resource="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Microsoft_Windows"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-06-08T00:00:00</release_date>
+        <rdfs:label>Tales of Symphonia</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/resource/Tales_of_Symphonia</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Bandai_Namco"/>
+            <rdf:Description rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Microsoft_Windows"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Bandai_Namco"/>
+            <rdf:Description rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Microsoft_Windows"/>
+            <rdf:Description rdf:about="https://mis.cs.univie.ac.at/ontologies/2021SS/mst#Tales_of_Symphonia"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

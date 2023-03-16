@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Add a Triple{% endblock %}
+{% block html_body %}
+<h1>Add a Triple</h1>
+<form action="/triple" method = "POST">
+   <input id="subject" name="subject" type="text" placeholder="subject">
+   <input id="predicate" name="predicate" type="text" placeholder="predicate">
+   <input id="object" name="object" type="text" placeholder="object">
+   <input type="submit" value="submit">
+</form>
+{% endblock %}

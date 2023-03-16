@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}{{name}}{% endblock %}
+{% block html_body %}
+<h1>{{name}}</h1>
+<!-- section for DBPedia search and autocompletion --> 
+<h2>Search DBPedia</h2>
+<form action="https://lookup.dbpedia.org/api/search" target="_blank">
+   <input id="searchbar" onkeyup="searchDBPedia()" type="text"
+      name="query" placeholder="search DBPedia..">
+</form>
+<table id="autocomplete_table" border='1'>
+   <thead>
+      <tr>
+         <th>Name</th>
+         <th>Link</th>
+         <th>Add</th>
+      </tr>
+   </thead>
+</table>
+<!-- section for additional resources --> 
+<h2>Links to other resources (rdfs:seeAlso)</h2>
+<table id="see_also_table">
+   <tbody>
+      {% for link in see_also_links %}
+      <tr>
+         <td><a href="{{link}}">{{link}}</a></td>
+         <td><input type="button" id={{link}} name={{link}} value="remove"></td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+<!-- section for links to other individuals --> 
+<h2>Links to other individuals (interlinking)</h2>
+<table border='1'>
+   <tbody>
+      <tr>
+         <th>Relation</th>
+         <th>Related individual</th>
+      </tr>
+      {% for link in interlinked %}
+      <tr>
+         <td>{{link[0]}}</td>
+         <td><a href="{{link[1]}}">{{link[1]}}</a></td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+<!-- sections for predicates and objects --> 
+<h2>Raw base data</h2>
+<table border='1'>
+   <tbody>
+      <tr>
+         <th>Property</th>
+         <th>Value</h3></th>
+      </tr>
+      {% for tuple in tuples %}
+      <tr>
+         <td>{{tuple[0]}}</td>
+         <td>{{tuple[1]}}</td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+<!-- necessary scripts --> 
+<script type="text/javascript" src="{{url_for('static', filename='search_dbpedia.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='remove_see_also_listener.js')}}"></script>
+<script type="text/javascript"> initializeRemoveSeeAlsoListener("{{name}}", "{{ url_for('removeSeeAlso') }}") </script>
+<script type="text/javascript" src="{{url_for('static', filename='add_see_also_listener.js')}}"></script>
+<script type="text/javascript"> initializeAddSeeAlsoListener("{{name}}", "{{ url_for('addSeeAlso') }}") </script>
+{% endblock %}
